@@ -1,0 +1,32 @@
+{
+  "name": "NoLoginPinterest",
+  "manifest_version": 2,
+  "version": "1.0",
+
+  "description": "Let you browse pinterest without having to sign up or login",
+
+  "permissions": [
+    "https://www.pinterest.com/*",
+    "http://www.pinterest.com/*",
+    "http://pinterest.com/*",
+    "https://pinterest.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.pinterest.com/*",
+        "http://www.pinterest.com/*",
+        "http://pinterest.com/*",
+        "https://pinterest.com/*"
+      ],
+      "js": ["loadStopper.js"]
+    }
+  ],
+
+  "background": {
+        "scripts": [
+            "background.js"
+        ]
+  }
+}
